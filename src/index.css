@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-ink text-cream font-sans antialiased; }
+  h1, h2, h3, h4 { @apply font-display; }
+  ::selection { background: #f2a33a; color: #0d0c0a; }
+}
+
+@layer components {
+  /* Consistent section heading (same font, size, colour everywhere) */
+  .section-title { @apply font-display text-3xl sm:text-4xl font-bold text-cream leading-tight; }
+  .section-eyebrow { @apply text-xs font-semibold uppercase tracking-[0.22em] text-amber; }
+  .section-sub { @apply mt-3 max-w-2xl text-mute leading-relaxed; }
+
+  /* One button style used across the whole site */
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition duration-200 disabled:opacity-60 disabled:cursor-not-allowed; }
+  .btn-primary { @apply btn bg-amber text-ink hover:bg-amber-soft hover:shadow-glow; }
+  .btn-ghost { @apply btn border border-line text-cream hover:border-amber hover:text-amber; }
+  .btn-danger { @apply btn border border-red-500/40 text-red-300 hover:bg-red-500/10; }
+  .btn-sm { @apply px-4 py-2 text-xs; }
+
+  .card { @apply rounded-2xl border border-line bg-panel; }
+  .input { @apply w-full rounded-xl border border-line bg-raised px-4 py-3 text-sm text-cream placeholder:text-mute/60 outline-none transition focus:border-amber focus:ring-2 focus:ring-amber/20; }
+  .label { @apply mb-1.5 block text-xs font-semibold uppercase tracking-wider text-mute; }
+  .badge { @apply inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide; }
+  .container-x { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+}
+
+.skeleton {
+  background: linear-gradient(100deg, #1f1c18 30%, #2a261f 50%, #1f1c18 70%);
+  background-size: 200% 100%;
+  @apply animate-sweep rounded-xl;
+}
+
+/* Swiper theming */
+.swiper-pagination-bullet { background: #f6f0e4 !important; opacity: .45; }
+.swiper-pagination-bullet-active { background: #f2a33a !important; opacity: 1; width: 26px !important; border-radius: 6px !important; }
+.swiper-button-next, .swiper-button-prev { color: #f2a33a !important; transform: scale(.7); }
