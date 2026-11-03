@@ -77,8 +77,8 @@ export default function StudioDetails() {
         <Link to="/" className="hover:text-amber">Home</Link> / <Link to="/studios" className="hover:text-amber">Studios</Link> / <span className="text-cream">{studio.title}</span>
       </nav>
 
-      <div className="grid gap-10 lg:grid-cols-[1.6fr_1fr]">
-        <div>
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
+        <div className="min-w-0">
           <Swiper modules={[Navigation, Pagination]} navigation pagination={{ clickable: true }} className="h-[320px] overflow-hidden rounded-2xl border border-line sm:h-[460px]">
             {gallery.map((g, i) => (
               <SwiperSlide key={g + i}>
