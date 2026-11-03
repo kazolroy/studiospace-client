@@ -2,7 +2,7 @@
 
 A peer-to-peer marketplace where creators book photo studios, sound stages, podcast lounges, music suites and art workshops by the hour, and hosts list their own spaces.
 
-**Live Site:** https://YOUR-LIVE-SITE.vercel.app
+**Live Site:** https://studiospace-client-mu.vercel.app
 **Server Repo:** https://github.com/kazolroy/studiospace-server
 
 ## Features
@@ -46,5 +46,5 @@ React, Vite, React Router, Tailwind CSS, Swiper, Firebase Authentication, react-
 
 ## Examiner Test Credentials
 
-- **Email:** YOUR-TEST-EMAIL@gmail.com
-- **Password:** YOUR-TEST-PASSWORD
+- **Email:** examiner@studiospace.com
+- **Password:** Examiner123
